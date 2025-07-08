@@ -75,61 +75,75 @@ body {
     text-align: left;
 }
 
-.nav-bar{
-    list-style-type: none;
-    overflow: hidden;
-    background-color: #1d1d1d;
-    text-decoration: none;
-    margin-top: -25vh;
-    margin-left: 7vh;
-    font-family: 'Raleway', sans-serif;
-    position: absolute;
-    left: 30%;
-    border-radius:1.5vh;
-    box-shadow: 0 1vh 2vh 0 rgb(125, 125, 125);
-    border-color: #f2f2f2;
+/* Basic NavBar Styling */
+.nav-bar {
+  list-style-type: none;
+  text-decoration: none;
+  background-color: #1d1d1d;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5vh;
+  box-shadow: 0 1vh 2vh 0 rgb(125, 125, 125);
+  font-family: 'Raleway', sans-serif;
+  width: 40%;
+
 }
 
-.nav-bar a{
-    color: #f2f2f2;
-    text-align: center;
-    padding: 2vh 3vh;
-    text-decoration: none;
-    font-size: 17px;
-    display: inline-block;
-    text-align: center;
-    transition: 0.3s;
+.nav-bar a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 2vh 3vh;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
 }
 
-.nav-bar a:hover{
-    background-color: #f6ff00;
-    color: black;
-    
+.nav-bar a:hover {
+  background-color: #f6ff00;
+  color: black;
 }
 
-@media screen and (max-width: 600px){
-  .nav-bar a:not(:first-child) {display: none;}
-  .nav-bar a.icon{
-    float: right;
+.nav-bar .icon {
+  display: none;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  .nav-bar a:not(:first-child):not(.icon) {
+    display: none;
+  }
+
+  .nav-bar a.icon {
     display: block;
-  }
-  
-}
-
-@media screen and (max-width: 600px){
-  .nav-bar.responsive{position: relative;}
-  .nav-bar.responsive.icon{
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 10px;
   }
-  .nav-bar.nav-bar.responsive a{
-    float: none;
+
+  .nav-bar.responsive {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .nav-bar.responsive a {
     display: block;
     text-align: left;
+    width: 100%;
+    padding: 1vh 2vh;
+  }
 
+  .nav-bar.responsive .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 }
+
 
 .social-links{
   margin-top: 4vh;
