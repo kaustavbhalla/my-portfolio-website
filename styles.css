@@ -112,3 +112,20 @@ body {
   background-color: #f6ff00;
   border-radius: 5px;
 }
+
+.devmod{
+  align-items: center;
+  position: absolute;
+  top: 3px;
+  width: 100%;
+  margin-bottom: 3vh;
+}
+
+.devmod h4{
+  color: white;
+  background-color: rgba(255, 115, 0, 0.426);
+  font-family: 'Raleway' sans-serif;
+  font-weight: 100;
+  padding-left: 90vh;
+  font-size: 3vh;
+}
